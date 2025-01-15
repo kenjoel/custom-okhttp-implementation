@@ -1,0 +1,25 @@
+syntax = "proto3";
+package com.spotify.custom;
+
+message ChallengeOrchestratorGetSessionRequest {
+    string session_id = 1;
+}
+
+message ChallengeOrchestratorGetSessionResponse {
+    message Extra {
+        string url = 1;
+    }
+
+    message Detail {
+    bytes challenge_id = 1;  // changed back to bytes
+    Extra extra_info = 101;
+    }
+
+    
+    Detail detail = 1;
+}
+
+// Adding the wrapper message
+message ResponseWrapper {
+    ChallengeOrchestratorGetSessionResponse response = 1;
+}

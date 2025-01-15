@@ -1,0 +1,1 @@
+java -cp "spotify-api.jar" bot.Main 300 US true

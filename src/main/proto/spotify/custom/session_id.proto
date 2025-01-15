@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package com.spotify.custom;
+
+// A simple message that carries a session identifier.
+message SessionID {
+  string session_id = 1; // Unique identifier for the session.
+}

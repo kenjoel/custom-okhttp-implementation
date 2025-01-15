@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.spotify.custom;
+
+message Response {
+    message Nested {
+        string id = 1;
+    }
+message LoginSuccessful {
+        string username = 1;
+        string somekindofloginchallenge = 2;
+    }
+
+    LoginSuccessful details = 1;
+    Nested challenge = 3;
+    string request_id = 4;
+}

@@ -1,0 +1,1 @@
+java -cp "spotify-api.jar" bot.MainTasks

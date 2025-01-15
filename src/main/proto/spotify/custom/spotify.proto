@@ -1,0 +1,45 @@
+syntax = "proto3";
+package com.spotify.custom;
+
+message SpotifySignupRequest {
+  string callbackUrl = 1;
+  AccountDetails accountDetails = 2;
+  ClientInfo clientInfo = 3;
+  ApplicationDetails applicationDetails = 4;
+
+  message AccountDetails {
+    string username = 1;
+    string dateOfBirth = 2;
+    int32 gender = 3;
+    AdditionalDetails additionalDetails = 4; // Changed from Preference to AdditionalDetails
+    EmailAndPassword emailAndPassword = 101;
+    
+    message AdditionalDetails {
+      NestedDetails nestedDetails = 1;  // Added this field
+
+      message NestedDetails {
+        int32 field = 1;
+      }
+    }
+
+    message EmailAndPassword {
+      string email = 1;
+      string password = 2;
+    }
+  }
+
+  message ClientInfo {
+    string clientKey = 1;
+    string devicePlatform = 2;
+    string appVersion = 3;
+    string unknownField4 = 4;
+    string deviceId = 5;
+  }
+
+  message ApplicationDetails {
+    string appType = 1;
+    map<string, string> unknownField3 = 3;
+    map<string, string> unknownField5 = 5;
+    map<string, string> unknownField6 = 6;
+  }
+}

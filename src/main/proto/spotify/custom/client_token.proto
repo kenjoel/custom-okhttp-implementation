@@ -1,0 +1,186 @@
+syntax = "proto3";
+
+package com.custom;
+
+import "google/protobuf/timestamp.proto";
+
+// Enumerations for different request and response types
+enum ClientTokenRequestType {
+  REQUEST_UNKNOWN = 0;
+  REQUEST_CLIENT_DATA_REQUEST = 1;
+  REQUEST_CHALLENGE_ANSWERS_REQUEST = 2;
+}
+
+enum ClientTokenResponseType {
+  RESPONSE_UNKNOWN = 0;
+  RESPONSE_GRANTED_TOKEN_RESPONSE = 1;
+  RESPONSE_CHALLENGES_RESPONSE = 2;
+}
+
+enum ChallengeType {
+  CHALLENGE_UNKNOWN = 0;
+  CHALLENGE_CLIENT_SECRET_HMAC = 1;
+  CHALLENGE_EVALUATE_JS = 2;
+  CHALLENGE_HASH_CASH = 3;
+}
+
+// Messages for client token operations
+message ClientTokenRequest {
+  oneof request {
+    ClientDataRequest client_data = 2;
+    ChallengeAnswersRequest challenge_answers = 3;
+  }
+  ClientTokenRequestType request_type = 1;
+}
+
+message ClientDataRequest {
+  string client_version = 1;
+  string client_id = 2;
+  oneof data {
+    ConnectivitySdkData connectivity_sdk_data = 3;
+  }
+}
+
+message ChallengeAnswersRequest {
+  string state = 1;
+  repeated ChallengeAnswer answers = 2;
+}
+
+message ClientTokenResponse {
+  oneof response {
+    GrantedTokenResponse granted_token = 2;
+    ChallengesResponse challenges = 3;
+  }
+  ClientTokenResponseType response_type = 1;
+}
+
+message TokenDomain {
+  string domain = 1;
+}
+
+message GrantedTokenResponse {
+  string token = 1;
+  int32 expires_after_seconds = 2;
+  int32 refresh_after_seconds = 3;
+  repeated TokenDomain domains = 4;
+}
+
+message ChallengesResponse {
+  string state = 1;
+  repeated Challenge challenges = 2;
+}
+
+message ClientSecretParameters {
+  string salt = 1;
+}
+
+message EvaluateJSParameters {
+  string code = 1;
+  repeated string libraries = 2;
+}
+
+message HashCashParameters {
+  int32 length = 1;
+  string prefix = 2;
+}
+
+message Challenge {
+  oneof parameters {
+    ClientSecretParameters client_secret_parameters = 2;
+    EvaluateJSParameters evaluate_js_parameters = 3;
+    HashCashParameters evaluate_hashcash_parameters = 4;
+  }
+  ChallengeType type = 1;
+}
+
+message ClientSecretHMACAnswer {
+  string hmac = 1;
+}
+
+message EvaluateJSAnswer {
+  string result = 1;
+}
+
+message HashCashAnswer {
+  string suffix = 1;
+}
+
+message ChallengeAnswer {
+  oneof answer {
+    ClientSecretHMACAnswer client_secret = 2;
+    EvaluateJSAnswer evaluate_js = 3;
+    HashCashAnswer hash_cash = 4;
+  }
+  ChallengeType ChallengeType = 1;
+}
+
+message ClientTokenBadRequest {
+  string message = 1;
+}
+
+// Messages for platform specific data encapsulation
+message ConnectivitySdkData {
+  PlatformSpecificData platform_specific_data = 1;
+  string device_id = 2;
+}
+
+message PlatformSpecificData {
+  oneof data {
+    NativeAndroidData android = 1;
+    NativeIOSData ios = 2;
+    NativeDesktopMacOSData desktop_macos = 3;
+    NativeDesktopWindowsData desktop_windows = 4;
+    NativeDesktopLinuxData desktop_linux = 5;
+  }
+}
+
+message NativeAndroidData {
+  Screen screen_dimensions = 1;
+  string android_version = 2;
+  int32 api_version = 3;
+  string device_name = 4;
+  string model_str = 5;
+  string brand = 6;
+  string manufacturer = 7;
+  int32 cacheSize = 8;
+}
+
+message NativeIOSData {
+  int32 user_interface_idiom = 1;
+  bool target_iphone_simulator = 2;
+  string hw_machine = 3;
+  string system_version = 4;
+  string simulator_model_identifier = 5;
+}
+
+message NativeDesktopWindowsData {
+  int32 os_version = 1;
+  int32 os_build = 3;
+  int32 platform_id = 4;
+  int32 unknown_value_5 = 5;
+  int32 unknown_value_6 = 6;
+  int32 image_file_machine = 7;
+  int32 pe_machine = 8;
+  bool unknown_value_10 = 10;
+}
+
+message NativeDesktopLinuxData {
+  string system_name = 1;
+  string system_release = 2;
+  string system_version = 3;
+  string hardware = 4;
+}
+
+message NativeDesktopMacOSData {
+  string system_version = 1;
+  string hw_model = 2;
+  string compiled_cpu_type = 3;
+}
+
+message Screen {
+  int32 width = 1;
+  int32 height = 2;
+  int32 smallestScreenWidthDp = 3;
+  int32 dpi = 4;
+  int32 dpi2 = 5;
+}
