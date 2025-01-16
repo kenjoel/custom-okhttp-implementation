@@ -6,7 +6,10 @@ public class ProxyInfo {
     public String proxyUsername;
     public String proxyPassword;
     public ProxyInfo(String proxyAddress, int proxyPort, String proxyUsername, String proxyPassword) {
-
+        this.proxyAddress = proxyAddress;
+        this.proxyPort = proxyPort;
+        this.proxyUsername = proxyUsername;
+        this.proxyPassword = proxyPassword;
     }
 
 

@@ -85,8 +85,8 @@ public class AndroidApiRegister {
     public AndroidApiRegister(@NotNull ProxyInfo conf, @NotNull String spotifyappversion, int apiversion, @NotNull String devicemodel, @NotNull String devicebrand,
                                 @NotNull String devicemanufacturer, int screenwidth, int screenheight, int density, int androidversion, @NotNull String model_code) throws IOException {
         try {
-            this.clienttoken_client = createSpotifyClient(conf);
-            this.signup_client = createSpotifyClient(conf);
+            this.clienttoken_client = createClient(conf);
+            this.signup_client = createClient(conf);
             
         } catch (KeyStoreException e) {
             throw new RuntimeException(e);
@@ -472,9 +472,9 @@ public class AndroidApiRegister {
         SSLSocketFactory forcingFactory = new ConscryptSocketFactoryWrapper(sslContext.getSocketFactory());
 
         // Build your pinned certificate list if needed
-        CertificatePinner certificatePinner = new CertificatePinner.Builder()
+        /*CertificatePinner certificatePinner = new CertificatePinner.Builder()
                 .add("clienttoken.spotify.com", "sha256/arIn0Xotkora1pfMdMYgxHh3Q4uIyce7KOOZpQ6akU8=")
-                .build();
+                .build();*/
 
         // Build a custom ConnectionSpec
         ConnectionSpec customSpec = new ConnectionSpec.Builder(true)
@@ -503,7 +503,7 @@ public class AndroidApiRegister {
                 // Add the Conscrypt-based SSLSocketFactory
                 .sslSocketFactory(forcingFactory, trustManager)
                 // Add certificate pinning:
-                .certificatePinner(certificatePinner)
+                //.certificatePinner(certificatePinner)
                 // Add the custom cipher suites & TLS versions
                 .connectionSpecs(Arrays.asList(customSpec, ConnectionSpec.CLEARTEXT))
                 // Force HTTP/2, etc.
