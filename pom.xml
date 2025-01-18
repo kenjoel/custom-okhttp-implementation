@@ -1,74 +1,86 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.spotty</groupId>
     <artifactId>spotify-api</artifactId>
     <version>1.0</version>
 
+    <!-- Use a property for the Protobuf version so it's consistent in dependencies and plugin config -->
+    <properties>
+        <protobuf.version>3.19.4</protobuf.version>
+        <!-- Or newer if you prefer, e.g. 3.21.x or 3.22.x, as long as it’s consistent -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <dependencies>
-        <!-- Logging -->
+        <!-- Protobuf runtime -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.19.4</version>
+            <version>${protobuf.version}</version>
         </dependency>
+
         <!-- Data -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.9.0</version>
         </dependency>
-        <!-- HTTP -->
+
+        <!-- HTTP (OkHttp) -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.12.0</version>
         </dependency>
-        <!-- Conscrypt for Android-like TLS stack -->
+
+        <!-- Conscrypt for advanced TLS -->
         <dependency>
             <groupId>org.conscrypt</groupId>
             <artifactId>conscrypt-openjdk-uber</artifactId>
             <version>2.5.2</version>
         </dependency>
+
         <!-- Commons Net (NTP) -->
         <dependency>
             <groupId>commons-net</groupId>
             <artifactId>commons-net</artifactId>
             <version>3.8.0</version>
         </dependency>
-        <!-- MAIL -->
+
+        <!-- Mail -->
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
         </dependency>
+
+        <!-- Annotations (JetBrains) -->
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>24.0.1</version>
             <scope>compile</scope>
         </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
+            <!-- Protobuf Maven Plugin -->
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.6.1</version>
                 <configuration>
-                    <protocExecutable>D:\Github\SpotifyBott\spotapi\src\main\resources\protoc.exe</protocExecutable>
+                    <!-- This downloads the matching protoc version for your OS -->
+                    <protocArtifact>
+                        com.google.protobuf:protoc:3.19.4:exe:linux-x86_64
+                    </protocArtifact>
+                    <!-- If you have custom .proto paths, you can configure them here -->
                 </configuration>
                 <executions>
                     <execution>
@@ -78,6 +90,18 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Standard Java compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <!-- Using properties above (maven.compiler.source / target) is also fine -->
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -938,9 +938,8 @@ public final class ClientToken {
         } else {
           if (requestCase_ == 2) {
             clientDataBuilder_.mergeFrom(value);
-          } else {
-            clientDataBuilder_.setMessage(value);
           }
+          clientDataBuilder_.setMessage(value);
         }
         requestCase_ = 2;
         return this;
@@ -1080,9 +1079,8 @@ public final class ClientToken {
         } else {
           if (requestCase_ == 3) {
             challengeAnswersBuilder_.mergeFrom(value);
-          } else {
-            challengeAnswersBuilder_.setMessage(value);
           }
+          challengeAnswersBuilder_.setMessage(value);
         }
         requestCase_ = 3;
         return this;
@@ -1891,9 +1889,8 @@ public final class ClientToken {
         } else {
           if (dataCase_ == 3) {
             connectivitySdkDataBuilder_.mergeFrom(value);
-          } else {
-            connectivitySdkDataBuilder_.setMessage(value);
           }
+          connectivitySdkDataBuilder_.setMessage(value);
         }
         dataCase_ = 3;
         return this;
@@ -3335,9 +3332,8 @@ public final class ClientToken {
         } else {
           if (responseCase_ == 2) {
             grantedTokenBuilder_.mergeFrom(value);
-          } else {
-            grantedTokenBuilder_.setMessage(value);
           }
+          grantedTokenBuilder_.setMessage(value);
         }
         responseCase_ = 2;
         return this;
@@ -3477,9 +3473,8 @@ public final class ClientToken {
         } else {
           if (responseCase_ == 3) {
             challengesBuilder_.mergeFrom(value);
-          } else {
-            challengesBuilder_.setMessage(value);
           }
+          challengesBuilder_.setMessage(value);
         }
         responseCase_ = 3;
         return this;
@@ -7767,9 +7762,8 @@ public final class ClientToken {
         } else {
           if (parametersCase_ == 2) {
             clientSecretParametersBuilder_.mergeFrom(value);
-          } else {
-            clientSecretParametersBuilder_.setMessage(value);
           }
+          clientSecretParametersBuilder_.setMessage(value);
         }
         parametersCase_ = 2;
         return this;
@@ -7909,9 +7903,8 @@ public final class ClientToken {
         } else {
           if (parametersCase_ == 3) {
             evaluateJsParametersBuilder_.mergeFrom(value);
-          } else {
-            evaluateJsParametersBuilder_.setMessage(value);
           }
+          evaluateJsParametersBuilder_.setMessage(value);
         }
         parametersCase_ = 3;
         return this;
@@ -8051,9 +8044,8 @@ public final class ClientToken {
         } else {
           if (parametersCase_ == 4) {
             evaluateHashcashParametersBuilder_.mergeFrom(value);
-          } else {
-            evaluateHashcashParametersBuilder_.setMessage(value);
           }
+          evaluateHashcashParametersBuilder_.setMessage(value);
         }
         parametersCase_ = 4;
         return this;
@@ -10081,9 +10073,8 @@ public final class ClientToken {
         } else {
           if (answerCase_ == 2) {
             clientSecretBuilder_.mergeFrom(value);
-          } else {
-            clientSecretBuilder_.setMessage(value);
           }
+          clientSecretBuilder_.setMessage(value);
         }
         answerCase_ = 2;
         return this;
@@ -10223,9 +10214,8 @@ public final class ClientToken {
         } else {
           if (answerCase_ == 3) {
             evaluateJsBuilder_.mergeFrom(value);
-          } else {
-            evaluateJsBuilder_.setMessage(value);
           }
+          evaluateJsBuilder_.setMessage(value);
         }
         answerCase_ = 3;
         return this;
@@ -10365,9 +10355,8 @@ public final class ClientToken {
         } else {
           if (answerCase_ == 4) {
             hashCashBuilder_.mergeFrom(value);
-          } else {
-            hashCashBuilder_.setMessage(value);
           }
+          hashCashBuilder_.setMessage(value);
         }
         answerCase_ = 4;
         return this;

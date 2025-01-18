@@ -520,8 +520,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1128,9 +1126,8 @@ public final class ClientToken {
         } else {
           if (requestCase_ == 2) {
             clientDataBuilder_.mergeFrom(value);
-          } else {
-            clientDataBuilder_.setMessage(value);
           }
+          clientDataBuilder_.setMessage(value);
         }
         requestCase_ = 2;
         return this;
@@ -1270,9 +1267,8 @@ public final class ClientToken {
         } else {
           if (requestCase_ == 3) {
             challengeAnswersBuilder_.mergeFrom(value);
-          } else {
-            challengeAnswersBuilder_.setMessage(value);
           }
+          challengeAnswersBuilder_.setMessage(value);
         }
         requestCase_ = 3;
         return this;
@@ -1573,8 +1569,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2345,9 +2339,8 @@ public final class ClientToken {
         } else {
           if (dataCase_ == 3) {
             connectivitySdkDataBuilder_.mergeFrom(value);
-          } else {
-            connectivitySdkDataBuilder_.setMessage(value);
           }
+          connectivitySdkDataBuilder_.setMessage(value);
         }
         dataCase_ = 3;
         return this;
@@ -2579,8 +2572,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3548,8 +3539,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4152,9 +4141,8 @@ public final class ClientToken {
         } else {
           if (responseCase_ == 2) {
             grantedTokenBuilder_.mergeFrom(value);
-          } else {
-            grantedTokenBuilder_.setMessage(value);
           }
+          grantedTokenBuilder_.setMessage(value);
         }
         responseCase_ = 2;
         return this;
@@ -4294,9 +4282,8 @@ public final class ClientToken {
         } else {
           if (responseCase_ == 3) {
             challengesBuilder_.mergeFrom(value);
-          } else {
-            challengesBuilder_.setMessage(value);
           }
+          challengesBuilder_.setMessage(value);
         }
         responseCase_ = 3;
         return this;
@@ -4547,8 +4534,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5174,8 +5159,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6237,8 +6220,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7147,8 +7128,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7753,8 +7732,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8518,8 +8495,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9235,8 +9210,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9898,9 +9871,8 @@ public final class ClientToken {
         } else {
           if (parametersCase_ == 2) {
             clientSecretParametersBuilder_.mergeFrom(value);
-          } else {
-            clientSecretParametersBuilder_.setMessage(value);
           }
+          clientSecretParametersBuilder_.setMessage(value);
         }
         parametersCase_ = 2;
         return this;
@@ -10040,9 +10012,8 @@ public final class ClientToken {
         } else {
           if (parametersCase_ == 3) {
             evaluateJsParametersBuilder_.mergeFrom(value);
-          } else {
-            evaluateJsParametersBuilder_.setMessage(value);
           }
+          evaluateJsParametersBuilder_.setMessage(value);
         }
         parametersCase_ = 3;
         return this;
@@ -10182,9 +10153,8 @@ public final class ClientToken {
         } else {
           if (parametersCase_ == 4) {
             evaluateHashcashParametersBuilder_.mergeFrom(value);
-          } else {
-            evaluateHashcashParametersBuilder_.setMessage(value);
           }
+          evaluateHashcashParametersBuilder_.setMessage(value);
         }
         parametersCase_ = 4;
         return this;
@@ -10435,8 +10405,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11005,8 +10973,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11575,8 +11541,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -12233,8 +12197,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -12896,9 +12858,8 @@ public final class ClientToken {
         } else {
           if (answerCase_ == 2) {
             clientSecretBuilder_.mergeFrom(value);
-          } else {
-            clientSecretBuilder_.setMessage(value);
           }
+          clientSecretBuilder_.setMessage(value);
         }
         answerCase_ = 2;
         return this;
@@ -13038,9 +12999,8 @@ public final class ClientToken {
         } else {
           if (answerCase_ == 3) {
             evaluateJsBuilder_.mergeFrom(value);
-          } else {
-            evaluateJsBuilder_.setMessage(value);
           }
+          evaluateJsBuilder_.setMessage(value);
         }
         answerCase_ = 3;
         return this;
@@ -13180,9 +13140,8 @@ public final class ClientToken {
         } else {
           if (answerCase_ == 4) {
             hashCashBuilder_.mergeFrom(value);
-          } else {
-            hashCashBuilder_.setMessage(value);
           }
+          hashCashBuilder_.setMessage(value);
         }
         answerCase_ = 4;
         return this;
@@ -13433,8 +13392,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14035,8 +13992,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14912,8 +14867,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -15658,9 +15611,8 @@ public final class ClientToken {
         } else {
           if (dataCase_ == 1) {
             androidBuilder_.mergeFrom(value);
-          } else {
-            androidBuilder_.setMessage(value);
           }
+          androidBuilder_.setMessage(value);
         }
         dataCase_ = 1;
         return this;
@@ -15800,9 +15752,8 @@ public final class ClientToken {
         } else {
           if (dataCase_ == 2) {
             iosBuilder_.mergeFrom(value);
-          } else {
-            iosBuilder_.setMessage(value);
           }
+          iosBuilder_.setMessage(value);
         }
         dataCase_ = 2;
         return this;
@@ -15942,9 +15893,8 @@ public final class ClientToken {
         } else {
           if (dataCase_ == 3) {
             desktopMacosBuilder_.mergeFrom(value);
-          } else {
-            desktopMacosBuilder_.setMessage(value);
           }
+          desktopMacosBuilder_.setMessage(value);
         }
         dataCase_ = 3;
         return this;
@@ -16084,9 +16034,8 @@ public final class ClientToken {
         } else {
           if (dataCase_ == 4) {
             desktopWindowsBuilder_.mergeFrom(value);
-          } else {
-            desktopWindowsBuilder_.setMessage(value);
           }
+          desktopWindowsBuilder_.setMessage(value);
         }
         dataCase_ = 4;
         return this;
@@ -16226,9 +16175,8 @@ public final class ClientToken {
         } else {
           if (dataCase_ == 5) {
             desktopLinuxBuilder_.mergeFrom(value);
-          } else {
-            desktopLinuxBuilder_.setMessage(value);
           }
+          desktopLinuxBuilder_.setMessage(value);
         }
         dataCase_ = 5;
         return this;
@@ -16551,8 +16499,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -17998,8 +17944,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -19018,8 +18962,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -19987,8 +19929,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -20988,8 +20928,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -21856,8 +21794,6 @@ public final class ClientToken {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -22641,98 +22577,96 @@ public final class ClientToken {
   static {
     java.lang.String[] descriptorData = {
       "\n!spotify/custom/client_token.proto\022\ncom" +
-      ".custom\032\037google/protobuf/timestamp.proto" +
-      "\"\321\001\n\022ClientTokenRequest\0224\n\013client_data\030\002" +
-      " \001(\0132\035.com.custom.ClientDataRequestH\000\022@\n" +
-      "\021challenge_answers\030\003 \001(\0132#.com.custom.Ch" +
-      "allengeAnswersRequestH\000\0228\n\014request_type\030" +
-      "\001 \001(\0162\".com.custom.ClientTokenRequestTyp" +
-      "eB\t\n\007request\"\210\001\n\021ClientDataRequest\022\026\n\016cl" +
-      "ient_version\030\001 \001(\t\022\021\n\tclient_id\030\002 \001(\t\022@\n" +
-      "\025connectivity_sdk_data\030\003 \001(\0132\037.com.custo" +
-      "m.ConnectivitySdkDataH\000B\006\n\004data\"V\n\027Chall" +
-      "engeAnswersRequest\022\r\n\005state\030\001 \001(\t\022,\n\007ans" +
-      "wers\030\002 \003(\0132\033.com.custom.ChallengeAnswer\"" +
-      "\316\001\n\023ClientTokenResponse\0229\n\rgranted_token" +
-      "\030\002 \001(\0132 .com.custom.GrantedTokenResponse" +
-      "H\000\0224\n\nchallenges\030\003 \001(\0132\036.com.custom.Chal" +
-      "lengesResponseH\000\022:\n\rresponse_type\030\001 \001(\0162" +
-      "#.com.custom.ClientTokenResponseTypeB\n\n\010" +
-      "response\"\035\n\013TokenDomain\022\016\n\006domain\030\001 \001(\t\"" +
-      "\215\001\n\024GrantedTokenResponse\022\r\n\005token\030\001 \001(\t\022" +
-      "\035\n\025expires_after_seconds\030\002 \001(\005\022\035\n\025refres" +
-      "h_after_seconds\030\003 \001(\005\022(\n\007domains\030\004 \003(\0132\027" +
-      ".com.custom.TokenDomain\"N\n\022ChallengesRes" +
-      "ponse\022\r\n\005state\030\001 \001(\t\022)\n\nchallenges\030\002 \003(\013" +
-      "2\025.com.custom.Challenge\"&\n\026ClientSecretP" +
-      "arameters\022\014\n\004salt\030\001 \001(\t\"7\n\024EvaluateJSPar" +
-      "ameters\022\014\n\004code\030\001 \001(\t\022\021\n\tlibraries\030\002 \003(\t" +
-      "\"4\n\022HashCashParameters\022\016\n\006length\030\001 \001(\005\022\016" +
-      "\n\006prefix\030\002 \001(\t\"\226\002\n\tChallenge\022F\n\030client_s" +
-      "ecret_parameters\030\002 \001(\0132\".com.custom.Clie" +
-      "ntSecretParametersH\000\022B\n\026evaluate_js_para" +
-      "meters\030\003 \001(\0132 .com.custom.EvaluateJSPara" +
-      "metersH\000\022F\n\034evaluate_hashcash_parameters" +
-      "\030\004 \001(\0132\036.com.custom.HashCashParametersH\000" +
-      "\022\'\n\004type\030\001 \001(\0162\031.com.custom.ChallengeTyp" +
-      "eB\014\n\nparameters\"&\n\026ClientSecretHMACAnswe" +
-      "r\022\014\n\004hmac\030\001 \001(\t\"\"\n\020EvaluateJSAnswer\022\016\n\006r" +
-      "esult\030\001 \001(\t\" \n\016HashCashAnswer\022\016\n\006suffix\030" +
-      "\001 \001(\t\"\360\001\n\017ChallengeAnswer\022;\n\rclient_secr" +
-      "et\030\002 \001(\0132\".com.custom.ClientSecretHMACAn" +
-      "swerH\000\0223\n\013evaluate_js\030\003 \001(\0132\034.com.custom" +
-      ".EvaluateJSAnswerH\000\022/\n\thash_cash\030\004 \001(\0132\032" +
-      ".com.custom.HashCashAnswerH\000\0220\n\rChalleng" +
-      "eType\030\001 \001(\0162\031.com.custom.ChallengeTypeB\010" +
-      "\n\006answer\"(\n\025ClientTokenBadRequest\022\017\n\007mes" +
-      "sage\030\001 \001(\t\"j\n\023ConnectivitySdkData\022@\n\026pla" +
-      "tform_specific_data\030\001 \001(\0132 .com.custom.P" +
-      "latformSpecificData\022\021\n\tdevice_id\030\002 \001(\t\"\265" +
-      "\002\n\024PlatformSpecificData\0220\n\007android\030\001 \001(\013" +
-      "2\035.com.custom.NativeAndroidDataH\000\022(\n\003ios" +
-      "\030\002 \001(\0132\031.com.custom.NativeIOSDataH\000\022;\n\rd" +
-      "esktop_macos\030\003 \001(\0132\".com.custom.NativeDe" +
-      "sktopMacOSDataH\000\022?\n\017desktop_windows\030\004 \001(" +
-      "\0132$.com.custom.NativeDesktopWindowsDataH" +
-      "\000\022;\n\rdesktop_linux\030\005 \001(\0132\".com.custom.Na" +
-      "tiveDesktopLinuxDataH\000B\006\n\004data\"\320\001\n\021Nativ" +
-      "eAndroidData\022-\n\021screen_dimensions\030\001 \001(\0132" +
-      "\022.com.custom.Screen\022\027\n\017android_version\030\002" +
-      " \001(\t\022\023\n\013api_version\030\003 \001(\005\022\023\n\013device_name" +
-      "\030\004 \001(\t\022\021\n\tmodel_str\030\005 \001(\t\022\r\n\005brand\030\006 \001(\t" +
-      "\022\024\n\014manufacturer\030\007 \001(\t\022\021\n\tcacheSize\030\010 \001(" +
-      "\005\"\236\001\n\rNativeIOSData\022\034\n\024user_interface_id" +
-      "iom\030\001 \001(\005\022\037\n\027target_iphone_simulator\030\002 \001" +
-      "(\010\022\022\n\nhw_machine\030\003 \001(\t\022\026\n\016system_version" +
-      "\030\004 \001(\t\022\"\n\032simulator_model_identifier\030\005 \001" +
-      "(\t\"\321\001\n\030NativeDesktopWindowsData\022\022\n\nos_ve" +
-      "rsion\030\001 \001(\005\022\020\n\010os_build\030\003 \001(\005\022\023\n\013platfor" +
-      "m_id\030\004 \001(\005\022\027\n\017unknown_value_5\030\005 \001(\005\022\027\n\017u" +
-      "nknown_value_6\030\006 \001(\005\022\032\n\022image_file_machi" +
-      "ne\030\007 \001(\005\022\022\n\npe_machine\030\010 \001(\005\022\030\n\020unknown_" +
-      "value_10\030\n \001(\010\"o\n\026NativeDesktopLinuxData" +
-      "\022\023\n\013system_name\030\001 \001(\t\022\026\n\016system_release\030" +
-      "\002 \001(\t\022\026\n\016system_version\030\003 \001(\t\022\020\n\010hardwar" +
-      "e\030\004 \001(\t\"]\n\026NativeDesktopMacOSData\022\026\n\016sys" +
-      "tem_version\030\001 \001(\t\022\020\n\010hw_model\030\002 \001(\t\022\031\n\021c" +
-      "ompiled_cpu_type\030\003 \001(\t\"a\n\006Screen\022\r\n\005widt" +
-      "h\030\001 \001(\005\022\016\n\006height\030\002 \001(\005\022\035\n\025smallestScree" +
-      "nWidthDp\030\003 \001(\005\022\013\n\003dpi\030\004 \001(\005\022\014\n\004dpi2\030\005 \001(" +
-      "\005*u\n\026ClientTokenRequestType\022\023\n\017REQUEST_U" +
-      "NKNOWN\020\000\022\037\n\033REQUEST_CLIENT_DATA_REQUEST\020" +
-      "\001\022%\n!REQUEST_CHALLENGE_ANSWERS_REQUEST\020\002" +
-      "*v\n\027ClientTokenResponseType\022\024\n\020RESPONSE_" +
-      "UNKNOWN\020\000\022#\n\037RESPONSE_GRANTED_TOKEN_RESP" +
-      "ONSE\020\001\022 \n\034RESPONSE_CHALLENGES_RESPONSE\020\002" +
-      "*|\n\rChallengeType\022\025\n\021CHALLENGE_UNKNOWN\020\000" +
-      "\022 \n\034CHALLENGE_CLIENT_SECRET_HMAC\020\001\022\031\n\025CH" +
-      "ALLENGE_EVALUATE_JS\020\002\022\027\n\023CHALLENGE_HASH_" +
-      "CASH\020\003b\006proto3"
+      ".custom\"\321\001\n\022ClientTokenRequest\0224\n\013client" +
+      "_data\030\002 \001(\0132\035.com.custom.ClientDataReque" +
+      "stH\000\022@\n\021challenge_answers\030\003 \001(\0132#.com.cu" +
+      "stom.ChallengeAnswersRequestH\000\0228\n\014reques" +
+      "t_type\030\001 \001(\0162\".com.custom.ClientTokenReq" +
+      "uestTypeB\t\n\007request\"\210\001\n\021ClientDataReques" +
+      "t\022\026\n\016client_version\030\001 \001(\t\022\021\n\tclient_id\030\002" +
+      " \001(\t\022@\n\025connectivity_sdk_data\030\003 \001(\0132\037.co" +
+      "m.custom.ConnectivitySdkDataH\000B\006\n\004data\"V" +
+      "\n\027ChallengeAnswersRequest\022\r\n\005state\030\001 \001(\t" +
+      "\022,\n\007answers\030\002 \003(\0132\033.com.custom.Challenge" +
+      "Answer\"\316\001\n\023ClientTokenResponse\0229\n\rgrante" +
+      "d_token\030\002 \001(\0132 .com.custom.GrantedTokenR" +
+      "esponseH\000\0224\n\nchallenges\030\003 \001(\0132\036.com.cust" +
+      "om.ChallengesResponseH\000\022:\n\rresponse_type" +
+      "\030\001 \001(\0162#.com.custom.ClientTokenResponseT" +
+      "ypeB\n\n\010response\"\035\n\013TokenDomain\022\016\n\006domain" +
+      "\030\001 \001(\t\"\215\001\n\024GrantedTokenResponse\022\r\n\005token" +
+      "\030\001 \001(\t\022\035\n\025expires_after_seconds\030\002 \001(\005\022\035\n" +
+      "\025refresh_after_seconds\030\003 \001(\005\022(\n\007domains\030" +
+      "\004 \003(\0132\027.com.custom.TokenDomain\"N\n\022Challe" +
+      "ngesResponse\022\r\n\005state\030\001 \001(\t\022)\n\nchallenge" +
+      "s\030\002 \003(\0132\025.com.custom.Challenge\"&\n\026Client" +
+      "SecretParameters\022\014\n\004salt\030\001 \001(\t\"7\n\024Evalua" +
+      "teJSParameters\022\014\n\004code\030\001 \001(\t\022\021\n\tlibrarie" +
+      "s\030\002 \003(\t\"4\n\022HashCashParameters\022\016\n\006length\030" +
+      "\001 \001(\005\022\016\n\006prefix\030\002 \001(\t\"\226\002\n\tChallenge\022F\n\030c" +
+      "lient_secret_parameters\030\002 \001(\0132\".com.cust" +
+      "om.ClientSecretParametersH\000\022B\n\026evaluate_" +
+      "js_parameters\030\003 \001(\0132 .com.custom.Evaluat" +
+      "eJSParametersH\000\022F\n\034evaluate_hashcash_par" +
+      "ameters\030\004 \001(\0132\036.com.custom.HashCashParam" +
+      "etersH\000\022\'\n\004type\030\001 \001(\0162\031.com.custom.Chall" +
+      "engeTypeB\014\n\nparameters\"&\n\026ClientSecretHM" +
+      "ACAnswer\022\014\n\004hmac\030\001 \001(\t\"\"\n\020EvaluateJSAnsw" +
+      "er\022\016\n\006result\030\001 \001(\t\" \n\016HashCashAnswer\022\016\n\006" +
+      "suffix\030\001 \001(\t\"\360\001\n\017ChallengeAnswer\022;\n\rclie" +
+      "nt_secret\030\002 \001(\0132\".com.custom.ClientSecre" +
+      "tHMACAnswerH\000\0223\n\013evaluate_js\030\003 \001(\0132\034.com" +
+      ".custom.EvaluateJSAnswerH\000\022/\n\thash_cash\030" +
+      "\004 \001(\0132\032.com.custom.HashCashAnswerH\000\0220\n\rC" +
+      "hallengeType\030\001 \001(\0162\031.com.custom.Challeng" +
+      "eTypeB\010\n\006answer\"(\n\025ClientTokenBadRequest" +
+      "\022\017\n\007message\030\001 \001(\t\"j\n\023ConnectivitySdkData" +
+      "\022@\n\026platform_specific_data\030\001 \001(\0132 .com.c" +
+      "ustom.PlatformSpecificData\022\021\n\tdevice_id\030" +
+      "\002 \001(\t\"\265\002\n\024PlatformSpecificData\0220\n\007androi" +
+      "d\030\001 \001(\0132\035.com.custom.NativeAndroidDataH\000" +
+      "\022(\n\003ios\030\002 \001(\0132\031.com.custom.NativeIOSData" +
+      "H\000\022;\n\rdesktop_macos\030\003 \001(\0132\".com.custom.N" +
+      "ativeDesktopMacOSDataH\000\022?\n\017desktop_windo" +
+      "ws\030\004 \001(\0132$.com.custom.NativeDesktopWindo" +
+      "wsDataH\000\022;\n\rdesktop_linux\030\005 \001(\0132\".com.cu" +
+      "stom.NativeDesktopLinuxDataH\000B\006\n\004data\"\320\001" +
+      "\n\021NativeAndroidData\022-\n\021screen_dimensions" +
+      "\030\001 \001(\0132\022.com.custom.Screen\022\027\n\017android_ve" +
+      "rsion\030\002 \001(\t\022\023\n\013api_version\030\003 \001(\005\022\023\n\013devi" +
+      "ce_name\030\004 \001(\t\022\021\n\tmodel_str\030\005 \001(\t\022\r\n\005bran" +
+      "d\030\006 \001(\t\022\024\n\014manufacturer\030\007 \001(\t\022\021\n\tcacheSi" +
+      "ze\030\010 \001(\005\"\236\001\n\rNativeIOSData\022\034\n\024user_inter" +
+      "face_idiom\030\001 \001(\005\022\037\n\027target_iphone_simula" +
+      "tor\030\002 \001(\010\022\022\n\nhw_machine\030\003 \001(\t\022\026\n\016system_" +
+      "version\030\004 \001(\t\022\"\n\032simulator_model_identif" +
+      "ier\030\005 \001(\t\"\321\001\n\030NativeDesktopWindowsData\022\022" +
+      "\n\nos_version\030\001 \001(\005\022\020\n\010os_build\030\003 \001(\005\022\023\n\013" +
+      "platform_id\030\004 \001(\005\022\027\n\017unknown_value_5\030\005 \001" +
+      "(\005\022\027\n\017unknown_value_6\030\006 \001(\005\022\032\n\022image_fil" +
+      "e_machine\030\007 \001(\005\022\022\n\npe_machine\030\010 \001(\005\022\030\n\020u" +
+      "nknown_value_10\030\n \001(\010\"o\n\026NativeDesktopLi" +
+      "nuxData\022\023\n\013system_name\030\001 \001(\t\022\026\n\016system_r" +
+      "elease\030\002 \001(\t\022\026\n\016system_version\030\003 \001(\t\022\020\n\010" +
+      "hardware\030\004 \001(\t\"]\n\026NativeDesktopMacOSData" +
+      "\022\026\n\016system_version\030\001 \001(\t\022\020\n\010hw_model\030\002 \001" +
+      "(\t\022\031\n\021compiled_cpu_type\030\003 \001(\t\"a\n\006Screen\022" +
+      "\r\n\005width\030\001 \001(\005\022\016\n\006height\030\002 \001(\005\022\035\n\025smalle" +
+      "stScreenWidthDp\030\003 \001(\005\022\013\n\003dpi\030\004 \001(\005\022\014\n\004dp" +
+      "i2\030\005 \001(\005*u\n\026ClientTokenRequestType\022\023\n\017RE" +
+      "QUEST_UNKNOWN\020\000\022\037\n\033REQUEST_CLIENT_DATA_R" +
+      "EQUEST\020\001\022%\n!REQUEST_CHALLENGE_ANSWERS_RE" +
+      "QUEST\020\002*v\n\027ClientTokenResponseType\022\024\n\020RE" +
+      "SPONSE_UNKNOWN\020\000\022#\n\037RESPONSE_GRANTED_TOK" +
+      "EN_RESPONSE\020\001\022 \n\034RESPONSE_CHALLENGES_RES" +
+      "PONSE\020\002*|\n\rChallengeType\022\025\n\021CHALLENGE_UN" +
+      "KNOWN\020\000\022 \n\034CHALLENGE_CLIENT_SECRET_HMAC\020" +
+      "\001\022\031\n\025CHALLENGE_EVALUATE_JS\020\002\022\027\n\023CHALLENG" +
+      "E_HASH_CASH\020\003b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_com_custom_ClientTokenRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -22878,7 +22812,6 @@ public final class ClientToken {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_custom_Screen_descriptor,
         new java.lang.String[] { "Width", "Height", "SmallestScreenWidthDp", "Dpi", "Dpi2", });
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

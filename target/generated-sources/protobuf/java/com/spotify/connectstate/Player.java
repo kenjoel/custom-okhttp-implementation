@@ -684,11 +684,9 @@ public final class Player {
      * <code>map&lt;string, string&gt; context_metadata = 21;</code>
      */
 
-    /* nullable */
-java.lang.String getContextMetadataOrDefault(
+    java.lang.String getContextMetadataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <code>map&lt;string, string&gt; context_metadata = 21;</code>
      */
@@ -720,11 +718,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; page_metadata = 22;</code>
      */
 
-    /* nullable */
-java.lang.String getPageMetadataOrDefault(
+    java.lang.String getPageMetadataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <code>map&lt;string, string&gt; page_metadata = 22;</code>
      */
@@ -5203,11 +5199,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    /* nullable */
-java.lang.String getMetadataOrDefault(
+    java.lang.String getMetadataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */

@@ -177,8 +177,6 @@ public final class Spotify {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -377,8 +375,6 @@ public final class Spotify {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -500,8 +496,6 @@ public final class Spotify {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -594,8 +588,6 @@ public final class Spotify {
               }
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
               throw e.setUnfinishedMessage(this);
-            } catch (com.google.protobuf.UninitializedMessageException e) {
-              throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
             } catch (java.io.IOException e) {
               throw new com.google.protobuf.InvalidProtocolBufferException(
                   e).setUnfinishedMessage(this);
@@ -1671,8 +1663,6 @@ public final class Spotify {
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
             throw new com.google.protobuf.InvalidProtocolBufferException(
                 e).setUnfinishedMessage(this);
@@ -3504,8 +3494,6 @@ public final class Spotify {
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -4559,11 +4547,9 @@ public final class Spotify {
        * <code>map&lt;string, string&gt; unknownField3 = 3;</code>
        */
 
-      /* nullable */
-java.lang.String getUnknownField3OrDefault(
+      java.lang.String getUnknownField3OrDefault(
           java.lang.String key,
-          /* nullable */
-java.lang.String defaultValue);
+          java.lang.String defaultValue);
       /**
        * <code>map&lt;string, string&gt; unknownField3 = 3;</code>
        */
@@ -4595,11 +4581,9 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; unknownField5 = 5;</code>
        */
 
-      /* nullable */
-java.lang.String getUnknownField5OrDefault(
+      java.lang.String getUnknownField5OrDefault(
           java.lang.String key,
-          /* nullable */
-java.lang.String defaultValue);
+          java.lang.String defaultValue);
       /**
        * <code>map&lt;string, string&gt; unknownField5 = 5;</code>
        */
@@ -4631,11 +4615,9 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; unknownField6 = 6;</code>
        */
 
-      /* nullable */
-java.lang.String getUnknownField6OrDefault(
+      java.lang.String getUnknownField6OrDefault(
           java.lang.String key,
-          /* nullable */
-java.lang.String defaultValue);
+          java.lang.String defaultValue);
       /**
        * <code>map&lt;string, string&gt; unknownField6 = 6;</code>
        */
@@ -4746,8 +4728,6 @@ java.lang.String defaultValue);
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);

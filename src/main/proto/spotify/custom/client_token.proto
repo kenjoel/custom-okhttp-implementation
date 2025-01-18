@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package com.custom;
 
-import "google/protobuf/timestamp.proto";
 
 // Enumerations for different request and response types
 enum ClientTokenRequestType {

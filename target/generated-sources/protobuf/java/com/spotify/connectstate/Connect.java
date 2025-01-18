@@ -2708,11 +2708,9 @@ public final class Connect {
      * <code>map&lt;string, .connectstate.DeviceInfo&gt; device = 4;</code>
      */
 
-    /* nullable */
-com.spotify.connectstate.Connect.DeviceInfo getDeviceOrDefault(
+    com.spotify.connectstate.Connect.DeviceInfo getDeviceOrDefault(
         java.lang.String key,
-        /* nullable */
-com.spotify.connectstate.Connect.DeviceInfo defaultValue);
+        com.spotify.connectstate.Connect.DeviceInfo defaultValue);
     /**
      * <code>map&lt;string, .connectstate.DeviceInfo&gt; device = 4;</code>
      */
@@ -6119,11 +6117,9 @@ com.spotify.connectstate.Connect.DeviceInfo defaultValue);
      * <code>map&lt;string, string&gt; metadata_map = 16;</code>
      */
 
-    /* nullable */
-java.lang.String getMetadataMapOrDefault(
+    java.lang.String getMetadataMapOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <code>map&lt;string, string&gt; metadata_map = 16;</code>
      */
@@ -14146,11 +14142,9 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metadata = 1;</code>
      */
 
-    /* nullable */
-java.lang.String getMetadataOrDefault(
+    java.lang.String getMetadataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <code>map&lt;string, string&gt; metadata = 1;</code>
      */

@@ -1143,9 +1143,8 @@ public final class Connectivity {
         } else {
           if (dataCase_ == 1) {
             androidBuilder_.mergeFrom(value);
-          } else {
-            androidBuilder_.setMessage(value);
           }
+          androidBuilder_.setMessage(value);
         }
         dataCase_ = 1;
         return this;
@@ -1285,9 +1284,8 @@ public final class Connectivity {
         } else {
           if (dataCase_ == 2) {
             iosBuilder_.mergeFrom(value);
-          } else {
-            iosBuilder_.setMessage(value);
           }
+          iosBuilder_.setMessage(value);
         }
         dataCase_ = 2;
         return this;
@@ -1427,9 +1425,8 @@ public final class Connectivity {
         } else {
           if (dataCase_ == 4) {
             windowsBuilder_.mergeFrom(value);
-          } else {
-            windowsBuilder_.setMessage(value);
           }
+          windowsBuilder_.setMessage(value);
         }
         dataCase_ = 4;
         return this;

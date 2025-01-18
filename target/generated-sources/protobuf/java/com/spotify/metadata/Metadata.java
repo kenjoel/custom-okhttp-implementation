@@ -14480,15 +14480,13 @@ public final class Metadata {
 
     /**
      * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=91
+     * @deprecated
      * @return Whether the deprecatedPopularity field is set.
      */
     @java.lang.Deprecated boolean hasDeprecatedPopularity();
     /**
      * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=91
+     * @deprecated
      * @return The deprecatedPopularity.
      */
     @java.lang.Deprecated int getDeprecatedPopularity();
@@ -15096,8 +15094,7 @@ public final class Metadata {
     private int deprecatedPopularity_;
     /**
      * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=91
+     * @deprecated
      * @return Whether the deprecatedPopularity field is set.
      */
     @java.lang.Override
@@ -15106,8 +15103,7 @@ public final class Metadata {
     }
     /**
      * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=91
+     * @deprecated
      * @return The deprecatedPopularity.
      */
     @java.lang.Override
@@ -16091,8 +16087,7 @@ public final class Metadata {
       private int deprecatedPopularity_ ;
       /**
        * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=91
+       * @deprecated
        * @return Whether the deprecatedPopularity field is set.
        */
       @java.lang.Override
@@ -16101,8 +16096,7 @@ public final class Metadata {
       }
       /**
        * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=91
+       * @deprecated
        * @return The deprecatedPopularity.
        */
       @java.lang.Override
@@ -16111,8 +16105,7 @@ public final class Metadata {
       }
       /**
        * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=91
+       * @deprecated
        * @param value The deprecatedPopularity to set.
        * @return This builder for chaining.
        */
@@ -16124,8 +16117,7 @@ public final class Metadata {
       }
       /**
        * <code>optional sint32 deprecated_popularity = 65 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Show.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=91
+       * @deprecated
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDeprecatedPopularity() {
@@ -17875,15 +17867,13 @@ public final class Metadata {
 
     /**
      * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=127
+     * @deprecated
      * @return Whether the deprecatedPopularity field is set.
      */
     @java.lang.Deprecated boolean hasDeprecatedPopularity();
     /**
      * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=127
+     * @deprecated
      * @return The deprecatedPopularity.
      */
     @java.lang.Deprecated int getDeprecatedPopularity();
@@ -18527,8 +18517,7 @@ public final class Metadata {
     private int deprecatedPopularity_;
     /**
      * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=127
+     * @deprecated
      * @return Whether the deprecatedPopularity field is set.
      */
     @java.lang.Override
@@ -18537,8 +18526,7 @@ public final class Metadata {
     }
     /**
      * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-     * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-     *     See metadata.proto;l=127
+     * @deprecated
      * @return The deprecatedPopularity.
      */
     @java.lang.Override
@@ -20087,8 +20075,7 @@ public final class Metadata {
       private int deprecatedPopularity_ ;
       /**
        * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=127
+       * @deprecated
        * @return Whether the deprecatedPopularity field is set.
        */
       @java.lang.Override
@@ -20097,8 +20084,7 @@ public final class Metadata {
       }
       /**
        * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=127
+       * @deprecated
        * @return The deprecatedPopularity.
        */
       @java.lang.Override
@@ -20107,8 +20093,7 @@ public final class Metadata {
       }
       /**
        * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=127
+       * @deprecated
        * @param value The deprecatedPopularity to set.
        * @return This builder for chaining.
        */
@@ -20120,8 +20105,7 @@ public final class Metadata {
       }
       /**
        * <code>optional sint32 deprecated_popularity = 67 [deprecated = true];</code>
-       * @deprecated spotify.metadata.proto.Episode.deprecated_popularity is deprecated.
-       *     See metadata.proto;l=127
+       * @deprecated
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDeprecatedPopularity() {

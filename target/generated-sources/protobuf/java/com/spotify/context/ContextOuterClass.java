@@ -76,11 +76,9 @@ public final class ContextOuterClass {
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */
 
-    /* nullable */
-java.lang.String getMetadataOrDefault(
+    java.lang.String getMetadataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
+        java.lang.String defaultValue);
     /**
      * <code>map&lt;string, string&gt; metadata = 3;</code>
      */

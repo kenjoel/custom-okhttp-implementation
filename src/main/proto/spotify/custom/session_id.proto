@@ -2,7 +2,9 @@ syntax = "proto3";
 
 package com.spotify.custom;
 
-// A simple message that carries a session identifier.
-message SessionID {
-  string session_id = 1; // Unique identifier for the session.
+// Force the outer class name to something else (e.g., "SessionIdMessageProto")
+option java_outer_classname = "SessionIdMessageProto";
+
+message SessionIdMessage {
+  string session_id = 1;
 }

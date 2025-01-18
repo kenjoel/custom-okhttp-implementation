@@ -1856,15 +1856,13 @@ public final class PlaylistAnnotate3 {
 
     /**
      * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-     * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-     *     See playlist_annotate3.proto;l=24
+     * @deprecated
      * @return Whether the deprecatedRenderFeatures field is set.
      */
     @java.lang.Deprecated boolean hasDeprecatedRenderFeatures();
     /**
      * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-     * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-     *     See playlist_annotate3.proto;l=24
+     * @deprecated
      * @return The deprecatedRenderFeatures.
      */
     @java.lang.Deprecated com.spotify.playlist_annotate3.PlaylistAnnotate3.RenderFeatures getDeprecatedRenderFeatures();
@@ -2062,8 +2060,7 @@ public final class PlaylistAnnotate3 {
     private int deprecatedRenderFeatures_;
     /**
      * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-     * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-     *     See playlist_annotate3.proto;l=24
+     * @deprecated
      * @return Whether the deprecatedRenderFeatures field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasDeprecatedRenderFeatures() {
@@ -2071,8 +2068,7 @@ public final class PlaylistAnnotate3 {
     }
     /**
      * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-     * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-     *     See playlist_annotate3.proto;l=24
+     * @deprecated
      * @return The deprecatedRenderFeatures.
      */
     @java.lang.Override @java.lang.Deprecated public com.spotify.playlist_annotate3.PlaylistAnnotate3.RenderFeatures getDeprecatedRenderFeatures() {
@@ -2571,8 +2567,7 @@ public final class PlaylistAnnotate3 {
       private int deprecatedRenderFeatures_ = 1;
       /**
        * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-       * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-       *     See playlist_annotate3.proto;l=24
+       * @deprecated
        * @return Whether the deprecatedRenderFeatures field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasDeprecatedRenderFeatures() {
@@ -2580,8 +2575,7 @@ public final class PlaylistAnnotate3 {
       }
       /**
        * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-       * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-       *     See playlist_annotate3.proto;l=24
+       * @deprecated
        * @return The deprecatedRenderFeatures.
        */
       @java.lang.Override
@@ -2592,8 +2586,7 @@ public final class PlaylistAnnotate3 {
       }
       /**
        * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-       * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-       *     See playlist_annotate3.proto;l=24
+       * @deprecated
        * @param value The deprecatedRenderFeatures to set.
        * @return This builder for chaining.
        */
@@ -2608,8 +2601,7 @@ public final class PlaylistAnnotate3 {
       }
       /**
        * <code>optional .spotify_playlist_annotate3.proto.RenderFeatures deprecated_render_features = 3 [default = NORMAL_FEATURES, deprecated = true];</code>
-       * @deprecated spotify_playlist_annotate3.proto.PlaylistAnnotation.deprecated_render_features is deprecated.
-       *     See playlist_annotate3.proto;l=24
+       * @deprecated
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDeprecatedRenderFeatures() {

@@ -17,6 +17,8 @@ import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.nio.file.Files;
@@ -85,8 +87,8 @@ public class AndroidApiRegister {
     public AndroidApiRegister(@NotNull ProxyInfo conf, @NotNull String spotifyappversion, int apiversion, @NotNull String devicemodel, @NotNull String devicebrand,
                                 @NotNull String devicemanufacturer, int screenwidth, int screenheight, int density, int androidversion, @NotNull String model_code) throws IOException {
         try {
-            this.clienttoken_client = createClient(conf);
-            this.signup_client = createClient(conf);
+            this.clienttoken_client = createSpotifyClient(conf);
+            this.signup_client = createSpotifyClient(conf);
             
         } catch (KeyStoreException e) {
             throw new RuntimeException(e);
@@ -455,65 +457,38 @@ public class AndroidApiRegister {
         return builder.build();
     }
 
-    public static synchronized OkHttpClient createSpotifyClient(ProxyInfo proxyInfo)
-            throws Exception {
-
-        // 1) Use your existing method to build the base OkHttpClient.
+    public static synchronized OkHttpClient createSpotifyClient(ProxyInfo proxyInfo) throws Exception {
+        // 1) Build the base OkHttpClient using the existing method.
         OkHttpClient baseClient = createClient(proxyInfo);
 
-        // 2) We will replicate some steps from SpotifyTLSExample:
+        // 2) Insert Conscrypt and create the Conscrypt-based SSLContext
         Security.insertProviderAt(Conscrypt.newProvider(), 1);
-
         SSLContext sslContext = SSLContext.getInstance("TLS", "Conscrypt");
-        X509TrustManager trustManager = defaultTrustManager(); // from your code
+        X509TrustManager trustManager = defaultTrustManager();
         sslContext.init(null, new TrustManager[]{trustManager}, new SecureRandom());
 
-        // The forcing wrapper that sets ALPN + session tickets
+        // Wrap the SSLSocketFactory
         SSLSocketFactory forcingFactory = new ConscryptSocketFactoryWrapper(sslContext.getSocketFactory());
 
-        // Build your pinned certificate list if needed
-        /*CertificatePinner certificatePinner = new CertificatePinner.Builder()
-                .add("clienttoken.spotify.com", "sha256/arIn0Xotkora1pfMdMYgxHh3Q4uIyce7KOOZpQ6akU8=")
-                .build();*/
-
-        // Build a custom ConnectionSpec
-        ConnectionSpec customSpec = new ConnectionSpec.Builder(true)
-                .tlsVersions(TlsVersion.TLS_1_3, TlsVersion.TLS_1_2)
-                .cipherSuites(
-                        CipherSuite.TLS_AES_128_GCM_SHA256,
-                        CipherSuite.TLS_AES_256_GCM_SHA384,
-                        CipherSuite.TLS_CHACHA20_POLY1305_SHA256,
-                        CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
-                        CipherSuite.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
-                        CipherSuite.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
-                        CipherSuite.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
-                        CipherSuite.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
-                        CipherSuite.TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
-                        CipherSuite.TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
-                        CipherSuite.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,
-                        CipherSuite.TLS_RSA_WITH_AES_128_GCM_SHA256,
-                        CipherSuite.TLS_RSA_WITH_AES_256_GCM_SHA384,
-                        CipherSuite.TLS_RSA_WITH_AES_128_CBC_SHA,
-                        CipherSuite.TLS_RSA_WITH_AES_256_CBC_SHA
-                )
-                .build();
-
-        // 3) We can clone the existing OkHttpClient into a new Builder:
         OkHttpClient.Builder newBuilder = baseClient.newBuilder()
-                // Add the Conscrypt-based SSLSocketFactory
                 .sslSocketFactory(forcingFactory, trustManager)
-                // Add certificate pinning:
-                //.certificatePinner(certificatePinner)
-                // Add the custom cipher suites & TLS versions
-                .connectionSpecs(Arrays.asList(customSpec, ConnectionSpec.CLEARTEXT))
-                // Force HTTP/2, etc.
                 .protocols(Arrays.asList(Protocol.HTTP_2, Protocol.HTTP_1_1))
                 .followRedirects(true)
                 .followSslRedirects(true)
                 .retryOnConnectionFailure(true)
-                .connectTimeout(10, TimeUnit.SECONDS)
-                .readTimeout(15, TimeUnit.SECONDS)
-                // Interceptor to log handshake info
+                .connectTimeout(10, TimeUnit.MINUTES)
+                .readTimeout(10, TimeUnit.MINUTES)
+                .dns(hostname -> {
+                    List<InetAddress> all = Dns.SYSTEM.lookup(hostname);
+                    List<InetAddress> v4Only = new ArrayList<>();
+                    for (InetAddress addr : all) {
+                        if (addr instanceof Inet4Address) {
+                            v4Only.add(addr);
+                        }
+                    }
+                    return v4Only.isEmpty() ? all : v4Only;
+                })
+                // Simple logging interceptor
                 .addInterceptor(chain -> {
                     Request request = chain.request();
                     System.out.println("[*SpotifyClient*] Sending " + request.method() + " to " + request.url());
@@ -526,9 +501,9 @@ public class AndroidApiRegister {
                     return response;
                 });
 
-        // 4) Return the newly built client
         return newBuilder.build();
     }
+
 
     // system default trust manager, from your code
     private static X509TrustManager defaultTrustManager() throws Exception {
